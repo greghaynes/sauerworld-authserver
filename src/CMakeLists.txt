@@ -1,2 +1,2 @@
-subdirs(enet)
+subdirs(enet tools)
 
