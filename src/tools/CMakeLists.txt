@@ -5,8 +5,9 @@ set(sauertools_srcs
 	stream.cpp
 	crypto.cpp)
 
-set(CMAKE_CXX_FLAGS -DSTANDALONE)
+add_definitions(-DSTANDALONE)
 
 include_directories(${CMAKE_SOURCE_DIR}/src/enet/include)
 
 add_library(sauertools STATIC ${sauertools_srcs})
+
