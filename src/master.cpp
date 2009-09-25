@@ -1,4 +1,5 @@
 #include "cube.h"
+#include "userstore.h"
 #include <signal.h>
 #include <enet/time.h>
 
@@ -16,11 +17,6 @@
 
 FILE *logfile = NULL;
 
-struct userinfo
-{
-    char *name;
-    void *pubkey;
-};
 hashtable<char *, userinfo> users;
 
 void adduser(char *name, char *pubkey)
