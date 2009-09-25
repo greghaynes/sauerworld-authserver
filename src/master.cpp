@@ -249,6 +249,7 @@ void genserverlist()
 
 void addgameserver(client &c)
 {
+    conoutf("added server");
     if(gameservers.length() >= SERVER_LIMIT) return;
     loopv(gameservers)
     {
@@ -266,6 +267,7 @@ void addgameserver(client &c)
         outputf(c, "failreg failed resolving ip\n");
         return;
     }     
+
     gameserver &s = *gameservers.add(new gameserver);
     s.address.host = c.address.host;
     s.address.port = c.servport+1;
